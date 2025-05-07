@@ -1,36 +1,97 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sistema de Gerenciamento de Transações
 
-## Getting Started
+Este projeto é uma aplicação desenvolvida em **React** com **Next.js**, que permite visualizar e interagir com transações financeiras, incluindo funcionalidades para reverter transações.
 
-First, run the development server:
+A aplicação utiliza o framework **Next.js** para a renderização e roteamento da interface, com **Ant Design** para a interface de usuário e **Jest** para testes.
+
+## Funcionalidades
+
+- Exibição de transações financeiras do tipo **DEPOSIT** (Depósito Realizado) e **TRANSFER** (Transferência).
+- Reversão de transações com feedback visual (mensagem de reversão em andamento).
+- Exibição de detalhes da transação, como data, status e usuário destinatário (para transferências).
+- Testes integrados para garantir a estabilidade da aplicação.
+
+## Tecnologias Usadas
+
+- **React**: Biblioteca principal para construção da interface.
+- **Next.js**: Framework para renderização do lado do servidor e roteamento.
+- **Ant Design**: Biblioteca de componentes UI para a construção da interface.
+- **Jest & Testing Library**: Para testes unitários e de integração.
+- **TypeScript**: Para maior segurança de tipos e escalabilidade.
+
+## Requisitos
+
+Antes de começar, certifique-se de ter o seguinte instalado em sua máquina:
+
+- **Node.js** (versão 16 ou superior)
+- **Yarn**, **npm**, **pnpm** ou **bun** (gerenciadores de pacotes)
+- **Git** (para controle de versão)
+- Editor de código, como **Visual Studio Code** (com extensões de **TypeScript** e **ESLint**)
+
+## Instalação
+
+### 1. Clonando o Repositório
+
+Primeiro, clone o repositório para sua máquina local:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/pbt35/front-end-gac.git
+cd front-end-gac
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Instalando dependências
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+yarn install
+npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 3. Variáveis de Ambiente
+```
+DATABASE_URL="file:./dev.db"
+JWT_SECRET="minha-chave-secreta"
+```
 
-## Learn More
+### 4. Inicializando o Servidor
 
-To learn more about Next.js, take a look at the following resources:
+```
+ỳarn dev
+npm run dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 5. Estrutura do Projeto
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+/src
+  /components                # Componentes React
+    /ListItem                # Componente para exibir transações
+  /contexts                  # Contextos React para gerenciamento de estado
+  /hooks                     # Hooks personalizados
+  /utils                     # Funções utilitárias
+  /tests                     # Testes unitários e de integração
+  /pages                     # Páginas do Next.js
+  /assets                    # Arquivos estáticos como imagens
+  /styles                    # Arquivos de estilo (CSS, SCSS)
+  index.tsx                  # Ponto de entrada do React
+  App.tsx                    # Componente raiz do React
+```
 
-## Deploy on Vercel
+### 6. Docker 
+Utilizando o Docker Compose:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Como no projeto já existe o arquivo ```docker-compose.yml```, basta rodar o comando abaixo: 
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+docker-compose up
+```
+
+### 7. Licença
+
+Este projeto está licenciado sob a MIT License
+
+
+
+
+
+
+
