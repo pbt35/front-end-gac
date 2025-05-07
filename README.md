@@ -18,6 +18,10 @@ A aplicação utiliza o framework **Next.js** para a renderização e roteamento
 - **Ant Design**: Biblioteca de componentes UI para a construção da interface.
 - **Jest & Testing Library**: Para testes unitários e de integração.
 - **TypeScript**: Para maior segurança de tipos e escalabilidade.
+- **SQLite**: Banco de dados local para desenvolvimento rápido.
+- **Prisma**: ORM utilizado para gerenciar a conexão e as operações com o banco SQLite de forma simples e tipada.
+
+
 
 ## Requisitos
 
