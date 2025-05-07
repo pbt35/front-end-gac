@@ -67,17 +67,16 @@ npm run dev
 
 ```
 /src
-  /components                # Componentes React
-    /ListItem                # Componente para exibir transações
-  /contexts                  # Contextos React para gerenciamento de estado
-  /hooks                     # Hooks personalizados
-  /utils                     # Funções utilitárias
-  /tests                     # Testes unitários e de integração
-  /pages                     # Páginas do Next.js
-  /assets                    # Arquivos estáticos como imagens
-  /styles                    # Arquivos de estilo (CSS, SCSS)
-  index.tsx                  # Ponto de entrada do React
-  App.tsx                    # Componente raiz do React
+  /app
+      /contexts                  # Contextos React para gerenciamento de estado
+      /components                # Componentes React
+        /ListItem                # Componente para exibir transações
+        /__tests__               # Testes unitários
+      /utils                     # Funções utilitárias
+    /dashboard                   # Páginas do Next.js
+      /deposit                   # Página de depósito
+  index.tsx                      # Ponto de entrada do React
+  App.tsx                        # Componente raiz do React
 ```
 
 ### 6. Docker 
